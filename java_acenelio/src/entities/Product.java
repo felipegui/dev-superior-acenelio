@@ -6,6 +6,11 @@ public class Product {
 	public double price;
 	public int quantity;
 	
+	//Default Constructor
+	public Product() {
+		
+	}
+	
 	//Constructor Method
 	public Product(String name, double price, int quantity) {
 		this.name = name;
