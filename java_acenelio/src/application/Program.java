@@ -3,8 +3,6 @@ package application;
 import java.util.Locale;
 import java.util.Scanner;
 
-import javax.swing.JOptionPane;
-
 import entities.Product;
 
 public class Program {
