@@ -43,33 +43,38 @@ public class Program {
 		System.out.print("Enter the employee id that will have salary increase: ");
 		int idSalary = scan.nextInt();
 
-		Integer position = positionId(list, idSalary);
+		//Expressão lambda
+		Employee emp = list.stream().filter(x -> x.getId() == idSalary).findFirst().orElse(null);
 		
-		if (position == null) {
+		//Integer position = positionId(list, idSalary);
+		
+		if (emp == null) {
 			System.out.println("This id does not exist!");
 		} else {
 			System.out.print("Enter the percentage: ");
 			double percentage = scan.nextDouble();
-			list.get(position).increaseSalary(percentage);
+			emp.increaseSalary(percentage);
 		}
 		
+		System.out.println();
+		
 		System.out.println("List of employee:");
-		for (Employee emp : list)
-			System.out.println(emp);
+		for (Employee employee : list)
+			System.out.println(employee);
 		
 		scan.close();
 
 	}
 
 	// Função auxiliar para encontrar um item na lista
-	public static Integer positionId(List<Employee> list, int id) {
-
-		for (int i = 0; i < list.size(); i++) {
-			if (list.get(i).getId() == id) {
-				return i;
-			}
-		}
-		return null;
-	}
+//	public static Integer positionId(List<Employee> list, int id) {
+//
+//		for (int i = 0; i < list.size(); i++) {
+//			if (list.get(i).getId() == id) {
+//				return i;
+//			}
+//		}
+//		return null;
+//	}
 
 }
