@@ -26,6 +26,12 @@ public class Program {
 			System.out.print("Id: ");
 			Integer id = scan.nextInt();
 
+			//Validador de ID
+			while (hasId(list, id)) {
+				System.out.print("ID already exists! Try again: ");
+				id = scan.nextInt();
+			}
+			
 			System.out.print("Name: ");
 			scan.nextLine();
 			String name = scan.nextLine();
@@ -39,15 +45,15 @@ public class Program {
 		}
 
 		System.out.println();
-		
+
 		System.out.print("Enter the employee id that will have salary increase: ");
 		int idSalary = scan.nextInt();
 
-		//Expressão lambda
+		// Expressão lambda
 		Employee emp = list.stream().filter(x -> x.getId() == idSalary).findFirst().orElse(null);
-		
-		//Integer position = positionId(list, idSalary);
-		
+
+		// Integer position = positionId(list, idSalary);
+
 		if (emp == null) {
 			System.out.println("This id does not exist!");
 		} else {
@@ -55,13 +61,13 @@ public class Program {
 			double percentage = scan.nextDouble();
 			emp.increaseSalary(percentage);
 		}
-		
+
 		System.out.println();
-		
+
 		System.out.println("List of employee:");
 		for (Employee employee : list)
 			System.out.println(employee);
-		
+
 		scan.close();
 
 	}
@@ -77,4 +83,9 @@ public class Program {
 //		return null;
 //	}
 
+	// Função auxiliar para verificar um ID já existente na lista, usando expressão lambda
+	public static boolean hasId(List<Employee> list, int id) {
+		Employee emp = list.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
+		return emp != null;
+	}
 }
