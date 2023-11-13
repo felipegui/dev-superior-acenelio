@@ -24,7 +24,7 @@ public class DataHourInText {
 		DateTimeFormatter fmt4 = DateTimeFormatter.ISO_DATE_TIME;
 		DateTimeFormatter fmt5 = DateTimeFormatter.ISO_INSTANT;
 
-		// System.out.println("Data formatada 1: " + d01.format(fmt1));
+		System.out.println("Data formatada 1: " + d01.format(fmt1));
 
 		// System.out.println("Data formatada 2: " + fmt1.format(d01));
 
