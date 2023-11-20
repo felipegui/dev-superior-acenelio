@@ -26,7 +26,6 @@ public class SavingsAccount extends Account {
 	}
 	
 	//Overlay
-	//Final prevents the method from being inherited
 	@Override
 	public final void withdraw(Double amount) {
 		balance -= amount;
