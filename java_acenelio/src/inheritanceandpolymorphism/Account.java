@@ -1,4 +1,4 @@
-//Generalization
+//Generalization - Super class
 package inheritanceandpolymorphism;
 
 public class Account {

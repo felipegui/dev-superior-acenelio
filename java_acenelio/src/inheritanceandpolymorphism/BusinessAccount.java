@@ -1,4 +1,4 @@
-//Specialization
+//Specialization - Subclass
 package inheritanceandpolymorphism;
 
 public class BusinessAccount extends Account {
