@@ -1,7 +1,6 @@
 package inheritanceandpolymorphism;
 
-//Final prevents the class from being inherited
-public final class SavingsAccount extends Account {
+public class SavingsAccount extends Account {
 
 	private Double interestRate;
 	
@@ -27,8 +26,9 @@ public final class SavingsAccount extends Account {
 	}
 	
 	//Overlay
+	//Final prevents the method from being inherited
 	@Override
-	public void withdraw(Double amount) {
+	public final void withdraw(Double amount) {
 		balance -= amount;
 	}
 }
