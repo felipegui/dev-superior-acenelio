@@ -1,6 +1,7 @@
 package inheritanceandpolymorphism;
 
-public class SavingsAccount extends Account {
+//Final prevents the class from being inherited
+public final class SavingsAccount extends Account {
 
 	private Double interestRate;
 	
