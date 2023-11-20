@@ -1,3 +1,4 @@
+//Generalization
 package inheritanceandpolymorphism;
 
 public class Account {
