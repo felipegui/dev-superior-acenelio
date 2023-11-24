@@ -1,6 +1,7 @@
 //Generalization - Super class
 package inheritanceAndPolymorphism;
 
+//The use abstract is to avoid class inheritance
 public abstract class Account {
 
 	private Integer number;
