@@ -1,6 +1,5 @@
 package exerIndidualAndLegalTax;
 
-import java.text.CompactNumberFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -43,6 +42,7 @@ public class Program {
 
 				list.add(new Company(name, annualIncome, numberOfEmployees));
 			}
+
 		}
 
 		System.out.println();
@@ -61,7 +61,7 @@ public class Program {
 		}
 
 		System.out.println("TOTAL TAXES: " + String.format("%.2f", sum));
-		
+
 		sc.close();
 
 	}
